@@ -17,7 +17,6 @@ export const _products = [
     img: img1,
     colors: ["red"],
     isFavorite: false,
-    onCart: false,
   },
   {
     id: 2,
@@ -26,7 +25,6 @@ export const _products = [
     img: img2,
     colors: ["black", "white"],
     isFavorite: false,
-    onCart: false,
   },
   {
     id: 3,
@@ -35,7 +33,6 @@ export const _products = [
     img: img3,
     colors: ["gray", "white"],
     isFavorite: false,
-    onCart: false,
   },
   {
     id: 4,
@@ -44,7 +41,6 @@ export const _products = [
     img: img4,
     colors: ["khaki"],
     isFavorite: false,
-    onCart: false,
   },
   {
     id: 5,
@@ -53,7 +49,6 @@ export const _products = [
     img: img5,
     colors: ["black", "white"],
     isFavorite: false,
-    onCart: false,
   },
   {
     id: 6,
@@ -62,7 +57,6 @@ export const _products = [
     img: img6,
     colors: ["blue", "yellow"],
     isFavorite: false,
-    onCart: false,
   },
   {
     id: 7,
@@ -71,7 +65,6 @@ export const _products = [
     img: img7,
     colors: ["black"],
     isFavorite: false,
-    onCart: false,
   },
   {
     id: 8,
@@ -80,7 +73,6 @@ export const _products = [
     img: img8,
     colors: ["black"],
     isFavorite: false,
-    onCart: false,
   },
   {
     id: 9,
@@ -89,7 +81,6 @@ export const _products = [
     img: img9,
     colors: ["black", "white"],
     isFavorite: false,
-    onCart: false,
   },
   {
     id: 10,
@@ -98,6 +89,5 @@ export const _products = [
     img: img10,
     colors: ["white", "black"],
     isFavorite: false,
-    onCart: false,
   },
 ];
