@@ -1,6 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
 
-$base-color: #61666a;
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+$primary-color: #61666a;
 $secondary-color: #0047ba;
 
 @mixin product-circle($color) {
@@ -19,10 +52,12 @@ $secondary-color: #0047ba;
 body {
   margin: 0;
   font-family: "rubik", "sans-serif";
+  color: $primary-color;
 }
 
-.div,
-.col,
+// Clean default margins and paddings in order to style cleaner
+div,
+.col*,
 .row {
   margin: 0;
   padding: 0;
@@ -49,5 +84,101 @@ body {
   }
   .yellow {
     @include product-circle((yellow));
+  }
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 120px;
+  padding-top: 4px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 9px 18px #00000029;
+  z-index: 10;
+
+  @include sm {
+    padding-left: 16px;
+    padding-right: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    height: 155px;
+  }
+  @include lg {
+    padding-left: 44px;
+    padding-right: 32px;
+    padding-top: 32px;
+    padding-bottom: 16px;
+    height: 155px;
+  }
+
+  .banner {
+    img {
+      width: 200px;
+      height: 28px;
+
+      @include lg {
+        width: 300px;
+        height: 42px;
+      }
+    }
+  }
+
+  .nav-top__links {
+    div {
+      padding: 2px;
+
+      @include sm {
+        padding: 10px;
+      }
+      @include lg {
+        padding: 15px;
+      }
+    }
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+    }
+  }
+
+  .nav-bottom {
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline;
+        margin-right: 8px;
+        @include sm {
+          margin-right: 32px;
+        }
+
+        a {
+          text-decoration: none;
+          color: $primary-color;
+          font-size: 13px;
+          @include sm {
+            font-size: 16px;
+          }
+          @include lg {
+            font-size: 26px;
+          }
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  background-color: #ffffff;
+
+  &__top {
   }
 }

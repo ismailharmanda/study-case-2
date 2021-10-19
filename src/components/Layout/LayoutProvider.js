@@ -1,11 +1,13 @@
 import React from "react";
+import Header from "../Header/Header";
+import Footer from "../Footor/Footor";
 
 const LayoutProvider = (props) => {
   return (
     <>
-      <div>Header</div>
+      <Header />
       <div>{props.children}</div>
-      <div>Footer</div>
+      <Footer />
     </>
   );
 };
