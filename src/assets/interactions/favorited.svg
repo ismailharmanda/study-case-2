@@ -1,0 +1,7 @@
+<svg id="Icon-Favorite" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <path id="Path_10551" data-name="Path 10551" d="M0,0H24V24H0Z" fill="none"/>
+  <g id="favorite-black-18dp">
+    <path id="Path_10553" data-name="Path 10553" d="M0,0H32V32H0Z" fill="none"/>
+    <path id="Path_10554" data-name="Path 10554" d="M16,29.35l-2.03-1.9C6.76,20.749,2,16.326,2,10.9A7.725,7.725,0,0,1,9.7,3,8.3,8.3,0,0,1,16,6a8.3,8.3,0,0,1,6.3-3A7.725,7.725,0,0,1,30,10.9c0,5.428-4.76,9.851-11.97,16.571Z" transform="translate(0)" fill="#0047ba"/>
+  </g>
+</svg>

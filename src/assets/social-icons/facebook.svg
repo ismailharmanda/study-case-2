@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="39.995" viewBox="0 0 40 39.995">
+  <g id="Layer_2" data-name="Layer 2" transform="translate(0.005 0)">
+    <g id="Graphic_Elements" data-name="Graphic Elements" transform="translate(-0.005 0)">
+      <path id="Path_10559" data-name="Path 10559" d="M40,20a20,20,0,1,0-23.11,19.756V25.777H11.792V20h5.093V15.594c0-5.013,2.963-7.78,7.54-7.78A30.746,30.746,0,0,1,28.9,8.2v4.921H26.381c-2.486,0-3.259,1.541-3.259,3.123V20h5.546l-.889,5.778H23.122V39.753A20,20,0,0,0,40,20Z" transform="translate(0.005 0)" fill="#757a7f"/>
+      <path id="Path_10560" data-name="Path 10560" d="M55.8,44.334l.889-5.781H51.14V34.805c0-1.582.773-3.123,3.259-3.123h2.521V26.761a30.746,30.746,0,0,0-4.477-.391c-4.578,0-7.54,2.767-7.54,7.78v4.406H39.81v5.778H44.9V58.31a20.23,20.23,0,0,0,6.252,0V44.334Z" transform="translate(-28.013 -18.557)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
