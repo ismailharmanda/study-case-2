@@ -47,4 +47,7 @@ body {
   .gray {
     @include product-circle(gray);
   }
+  .yellow {
+    @include product-circle((yellow));
+  }
 }
