@@ -31,12 +31,16 @@ const Header = () => {
         </div>
         <div className="nav-top__links col-4 order-2 order-lg-3 text-center d-flex justify-content-end">
           <div>
-            <img src={favorites} />
-            <p>Favorilerim</p>
+            <Link to="#">
+              <img src={favorites} />
+              <p>Favorilerim</p>
+            </Link>
           </div>
           <div>
-            <img src={cart} />
-            <p>Sepetim</p>
+            <Link to="#">
+              <img src={cart} />
+              <p>Sepetim</p>
+            </Link>
           </div>
         </div>
       </div>
