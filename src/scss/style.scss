@@ -1,10 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+$base-color: #61666a;
+$secondary-color: #0047ba;
+
+@mixin product-circle($color) {
+  background: $color;
+  width: 32px;
+  height: 32px;
+  border: 0px solid white;
+  border-radius: 50%;
+  margin-left: -1rem;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "rubik", "sans-serif";
 }
 
 .div,
@@ -12,4 +26,25 @@ body {
 .row {
   margin: 0;
   padding: 0;
+}
+
+.product-color {
+  .red {
+    @include product-circle(red);
+  }
+  .white {
+    @include product-circle(white);
+  }
+  .black {
+    @include product-circle(black);
+  }
+  .khaki {
+    @include product-circle(#dfc073);
+  }
+  .blue {
+    @include product-circle(#28a9ff);
+  }
+  .gray {
+    @include product-circle(gray);
+  }
 }
