@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "../../store";
+import { useHistory } from "react-router-dom";
 
 import banner from "../../assets/logo.svg";
 import favorites from "../../assets/interactions/favorites.svg";
@@ -8,6 +9,7 @@ import cart from "../../assets/interactions/cart.svg";
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
+  const history = useHistory();
   const [searchInput, setSearchInput] = useState("");
   const dispatch = useDispatch();
 
@@ -23,6 +25,7 @@ const Header = () => {
   const onSearchClick = (e) => {
     e.preventDefault();
     dispatch(searchActions.search(searchInput));
+    history.push("/");
   };
 
   return (
@@ -57,7 +60,7 @@ const Header = () => {
         </div>
         <div className="nav-top__links col-4 order-2 order-lg-3 text-center d-flex justify-content-end">
           <div>
-            <Link to="#">
+            <Link to="/favorites">
               <img src={favorites} alt="Favorites" />
               <p>Favorilerim</p>
             </Link>

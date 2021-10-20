@@ -14,6 +14,12 @@ const productSlice = createSlice({
       );
       targetProduct.isFavorite = !targetProduct.isFavorite;
     },
+    favorite(state, action) {
+      const targetProduct = state.find(
+        (product) => product.id === action.payload.id
+      );
+      targetProduct.isFavorite = true;
+    },
   },
 });
 

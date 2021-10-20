@@ -51,11 +51,11 @@ $light-gray-color: #f2f2f2;
   padding: 0;
   margin: 0;
 }
-
 body {
   margin: 0;
   font-family: "rubik", "sans-serif";
   color: $primary-color;
+  overflow-x: hidden;
 }
 
 // Clean default margins and paddings in order to style cleaner
@@ -443,4 +443,182 @@ div,
   background: white;
   padding: 8px;
   box-shadow: 0px 3px 6px #00000029;
+}
+
+.cart-container {
+  margin-top: 10px;
+  .cart {
+    padding: 22px 44px;
+
+    &__header {
+      font-size: 15px;
+      font-weight: 500;
+      @include sm {
+        font-size: 24px;
+      }
+    }
+
+    &__nav {
+      margin: 0;
+      margin-bottom: 32px;
+      a {
+        text-decoration: none;
+        color: $secondary-color;
+        font-size: 15px;
+        font-weight: 500;
+        @include sm {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .summary {
+    margin: 0;
+    padding: 22px;
+    background: #f8f8f8;
+    height: 100%;
+    font-size: 22px;
+
+    div {
+      margin-bottom: 12px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+    &__discount {
+      font-weight: 500;
+    }
+    &__cargo {
+      font-weight: 500;
+    }
+    &__total {
+      font-size: 28px;
+      font-weight: 500;
+      color: $secondary-color;
+    }
+  }
+}
+
+.cart-item {
+  &__image {
+    width: 180px;
+    height: 240px;
+    @media screen and (max-width: 560px) {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    padding-inline: 32px;
+    position: relative;
+
+    @media screen and (max-width: 560px) {
+      height: 200px;
+    }
+
+    h5 {
+      font-size: 16px;
+      font-weight: 400;
+
+      @include sm {
+        font-size: 20px;
+      }
+      @include xl {
+        font-size: 24px;
+      }
+    }
+
+    span {
+      font-weight: 500;
+    }
+
+    &-options {
+      @include sm {
+        position: absolute;
+        bottom: 0;
+      }
+      div {
+        font-size: 15px;
+        @include sm {
+          font-size: 22px;
+        }
+      }
+    }
+
+    &-code {
+      font-size: 16px;
+      @include xl {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__price {
+    text-align: right;
+    color: $secondary-color;
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  .counter {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 145px;
+    height: 48px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    &__button {
+      width: 35px;
+      height: 35px;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      cursor: pointer;
+    }
+    &__total {
+      font-size: 25px;
+      font-weight: 500;
+      color: $secondary-color;
+    }
+  }
+
+  &__divider {
+    margin-block: 32px;
+  }
+}
+
+.delete-container {
+  display: inline-block;
+  background: white;
+  padding: 8px;
+  box-shadow: 0px 3px 6px #00000029;
+  margin-right: 12px;
+  @media screen and (max-width: 560px) {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.cart-favorite-container {
+  display: inline-block;
+  background: white;
+  padding: 8px;
+  box-shadow: 0px 3px 6px #00000029;
+  @media screen and (max-width: 560px) {
+    position: absolute;
+    left: 60px;
+    top: 0px;
+  }
+}
+
+.cart-item__right {
+  position: relative;
 }
