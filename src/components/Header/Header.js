@@ -12,6 +12,7 @@ const Header = () => {
   const history = useHistory();
   const [searchInput, setSearchInput] = useState("");
   const dispatch = useDispatch();
+  const [errorMessage, setErrorMessage] = useState("");
 
   const cartState = useSelector((state) => state.cart);
   const totalItemOnCart = cartState?.items
@@ -20,13 +21,19 @@ const Header = () => {
 
   const onInputChange = (e) => {
     setSearchInput(e.target.value);
+    setErrorMessage("");
   };
 
   const onSearchClick = (e) => {
     e.preventDefault();
-    dispatch(searchActions.search(searchInput));
-    setSearchInput("");
-    history.push("/");
+
+    if (searchInput.length < 3) {
+      setErrorMessage("Minimim 3 karakter");
+    } else {
+      dispatch(searchActions.search(searchInput));
+      setSearchInput("");
+      history.push("/");
+    }
   };
 
   return (
@@ -57,6 +64,9 @@ const Header = () => {
                 </button>
               </div>
             </div>
+            {errorMessage && (
+              <span className="text-danger">{errorMessage}</span>
+            )}
           </form>
         </div>
         <div className="nav-top__links col-4 order-2 order-lg-3 text-center d-flex justify-content-end">
