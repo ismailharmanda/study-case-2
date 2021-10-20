@@ -1,3 +1,10 @@
+import React from "react";
+import { useDispatch } from "react-redux";
+import { productActions } from "../../store";
+
+import unFavoritedIcon from "../../assets/interactions/unfavorited.svg";
+import favoritedIcon from "../../assets/interactions/favorited.svg";
+
 import img1 from "../../assets/products/hoodie-red.png";
 import img2 from "../../assets/products/sweatshirt-black-zip.png";
 import img3 from "../../assets/products/sweatshirt-gray-zip.png";
@@ -9,6 +16,8 @@ import img8 from "../../assets/products/sweatshirt-black-zip-2.png";
 import img9 from "../../assets/products/sweatshirt-black-ataturk.png";
 import img10 from "../../assets/products/sweatshirt-white-ataturk.png";
 const ProductCard = ({ id, img, name, price, colors, isFavorite }) => {
+  const dispatch = useDispatch();
+
   let imageUrl;
   switch (id) {
     case 1:
@@ -46,11 +55,47 @@ const ProductCard = ({ id, img, name, price, colors, isFavorite }) => {
       imageUrl = img1;
       break;
   }
+  let favoriteButton;
+  switch (isFavorite) {
+    case true:
+      favoriteButton = (
+        <button
+          onClick={() => dispatch(productActions.favoriteToggle({ id }))}
+          className="btn bg-white favorite-container"
+        >
+          <img src={favoritedIcon} alt="Favorite" />
+        </button>
+      );
+      break;
+    case false:
+      favoriteButton = (
+        <button
+          onClick={() => dispatch(productActions.favoriteToggle({ id }))}
+          className="btn bg-white favorite-container"
+        >
+          <img src={unFavoritedIcon} alt="Favorite" />
+        </button>
+      );
+      break;
+
+    default:
+      favoriteButton = (
+        <button
+          onClick={() => dispatch(productActions.favoriteToggle({ id }))}
+          className="btn bg-white favorite-container"
+        >
+          <img src={unFavoritedIcon} alt="Favorite" />
+        </button>
+      );
+      break;
+  }
+
   return (
     <div
       style={{ maxWidth: "360px" }}
       className="product-card card col-12 col-sm-6 col-xl-3 p-0 m-1"
     >
+      {favoriteButton}
       <img src={imageUrl} className="card-img-top" alt="Product"></img>
       <div className="card-body">
         <h5>{name}</h5>

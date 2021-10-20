@@ -13,8 +13,8 @@ const DefaultPage = () => {
 
   const searchTerm = useSelector((state) => state.searchTerm.term);
 
-  const filteredList = productsList.filter((product) =>
-    product.name.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+  const filteredList = productsList?.filter((product) =>
+    product.name.toLowerCase().includes(searchTerm?.toLocaleLowerCase())
   );
   let sortedList;
 
@@ -34,8 +34,8 @@ const DefaultPage = () => {
       break;
   }
 
-  const totalFoundProduct = filteredList.length;
-  const renderedCards = sortedList.map((product) => {
+  const totalFoundProduct = filteredList?.length;
+  const renderedCards = sortedList?.map((product) => {
     return (
       <ProductCard
         key={product.id}
