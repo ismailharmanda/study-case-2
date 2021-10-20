@@ -25,6 +25,7 @@ const Header = () => {
   const onSearchClick = (e) => {
     e.preventDefault();
     dispatch(searchActions.search(searchInput));
+    setSearchInput("");
     history.push("/");
   };
 
@@ -32,7 +33,7 @@ const Header = () => {
     <div className="header">
       <div className="nav-top row align-items-center">
         <div className="banner col-8 col-lg-4 order-1 ">
-          <Link to="/">
+          <Link onClick={() => dispatch(searchActions.search(""))} to="/">
             <img src={banner} alt="Banner" />
           </Link>
         </div>

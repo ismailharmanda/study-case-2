@@ -622,3 +622,9 @@ div,
 .cart-item__right {
   position: relative;
 }
+
+.favorite-item__price {
+  font-weight: 500;
+  color: $secondary-color;
+  font-size: 32px;
+}

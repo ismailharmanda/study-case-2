@@ -66,7 +66,9 @@ const DefaultPage = () => {
       <h2>Erkek Sweatshirt Modelleri</h2>
       <div className="row m-0 p-0">
         <div className="search-result col-4 m-0 p-0">
-          {totalFoundProduct} ürün
+          {searchTerm
+            ? `"${searchTerm}" ile ilgili ${totalFoundProduct} ürün bulduk`
+            : `${totalFoundProduct} ürün`}
         </div>
         <div className="col-4 m-0 p-0"></div>
         <div className="filter-text col-4 m-0 p-0 text-end">
