@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+.success-modal {
+  position: fixed !important;
+  color: white;
+  text-align: center;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 50px;
+  background: green;
+  z-index: 100 !important;
+  border-radius: 8px;
+  opacity: 0.5;
+}

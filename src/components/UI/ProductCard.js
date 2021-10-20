@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { productActions } from "../../store";
 import { cartActions } from "../../store";
@@ -16,11 +16,17 @@ import img7 from "../../assets/products/sweatshirt-black.png";
 import img8 from "../../assets/products/sweatshirt-black-zip-2.png";
 import img9 from "../../assets/products/sweatshirt-black-ataturk.png";
 import img10 from "../../assets/products/sweatshirt-white-ataturk.png";
+import SuccessModal from "./SuccesModal";
 const ProductCard = ({ id, img, name, price, colors, isFavorite }) => {
+  const [showSuccessModal, setSuccessModal] = useState(false);
   const dispatch = useDispatch();
 
   const addCartClick = () => {
     dispatch(cartActions.add({ id, price, amount: 1 }));
+    setSuccessModal(true);
+    setTimeout(() => {
+      setSuccessModal(false);
+    }, 1000);
   };
   let imageUrl;
   switch (id) {
@@ -114,6 +120,7 @@ const ProductCard = ({ id, img, name, price, colors, isFavorite }) => {
           Sepete Ekle
         </button>
       </div>
+      {showSuccessModal && <SuccessModal />}
     </div>
   );
 };
