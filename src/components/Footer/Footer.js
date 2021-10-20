@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import appstore from "../../assets/download-centers/appstore.png";
 import playstore from "../../assets/download-centers/playstore.png";
@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer__top d-flex row align-items-center ">
-        <div className="stores col-12 col-lg-6 m-0 p-0">
+        <div className="stores col-12 col-lg-7 m-0 p-0">
           <span>Uygulamayı indirin</span>
           <Link to="#">
             <img src={appstore} alt="App Store" />
@@ -27,7 +27,7 @@ const Footer = () => {
             <img src={appgallery} alt="App Gallery" />
           </Link>
         </div>
-        <div className="socials col-12 col-lg-6 m-0 p-0 text-lg-end">
+        <div className="socials col-12 col-lg-5 m-0 p-0 text-lg-end">
           <span>Bizi takip edin</span>
           <Link to="#">
             <img src={facebook} alt="Facebook" />

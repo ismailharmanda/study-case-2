@@ -1,20 +1,9 @@
-import img1 from "./assets/products/hoodie-red.png";
-import img2 from "./assets/products/sweatshirt-black-zip.png";
-import img3 from "./assets/products/sweatshirt-gray-zip.png";
-import img4 from "./assets/products/sweatshirt-khaki.png";
-import img5 from "./assets/products/hoodie-black.png";
-import img6 from "./assets/products/hoodie-blue.png";
-import img7 from "./assets/products/sweatshirt-black.png";
-import img8 from "./assets/products/sweatshirt-black-zip-2.png";
-import img9 from "./assets/products/sweatshirt-black-ataturk.png";
-import img10 from "./assets/products/sweatshirt-white-ataturk.png";
-
 export const _products = [
   {
     id: 1,
     name: "Kapüşonlu Uzun Kollu Baskılı Kalın Erkek Sweatshirt",
     price: 119.99,
-    img: img1,
+    img: "hoodie-red.png",
     colors: ["red"],
     isFavorite: false,
   },
@@ -22,7 +11,7 @@ export const _products = [
     id: 2,
     name: "LCW BASIC Kapüşonlu Uzun Kollu Fermuarlı Erkek Sweatshirt",
     price: 109.99,
-    img: img2,
+    img: "sweatshirt-black-zip.png",
     colors: ["black", "white"],
     isFavorite: false,
   },
@@ -30,7 +19,7 @@ export const _products = [
     id: 3,
     name: "LCW BASIC Kapüşonlu Uzun Kollu Fermuarlı Erkek Sweatshirt",
     price: 119.99,
-    img: img3,
+    img: "sweatshirt-gray-zip.png",
     colors: ["gray", "white"],
     isFavorite: false,
   },
@@ -38,7 +27,7 @@ export const _products = [
     id: 4,
     name: "LCW BASIC Bisiklet Yaka Uzun Kollu Kalın Erkek Sweatshirt",
     price: 89.99,
-    img: img4,
+    img: "sweatshirt-khaki.png",
     colors: ["khaki"],
     isFavorite: false,
   },
@@ -46,7 +35,7 @@ export const _products = [
     id: 5,
     name: "LCW CASUAL Kapüşonlu Uzun Kollu Baskılı Erkek Sweatshirt",
     price: 119.99,
-    img: img5,
+    img: "hoodie-black.png",
     colors: ["black", "white"],
     isFavorite: false,
   },
@@ -54,7 +43,7 @@ export const _products = [
     id: 6,
     name: "LCW CASUAL Kapüşonlu Uzun Kollu Baskılı Erkek Sweatshirt",
     price: 119.99,
-    img: img6,
+    img: "hoodie-blue.png",
     colors: ["blue", "yellow"],
     isFavorite: false,
   },
@@ -62,7 +51,7 @@ export const _products = [
     id: 7,
     name: "LCW CASUAL Bisiklet Yaka Uzun Kollu Erkek Sweatshirt",
     price: 69.99,
-    img: img7,
+    img: "sweatshirt-black.png",
     colors: ["black"],
     isFavorite: false,
   },
@@ -70,7 +59,7 @@ export const _products = [
     id: 8,
     name: "LCW CASUAL Kapüşonlu Fermuarlı Erkek Sweatshirt",
     price: 109.99,
-    img: img8,
+    img: "sweatshirt-black-zip-2.png",
     colors: ["black"],
     isFavorite: false,
   },
@@ -78,7 +67,7 @@ export const _products = [
     id: 9,
     name: "Atatürk Baskılı Kapüşonlu Sweatshirt",
     price: 99.99,
-    img: img9,
+    img: "sweatshirt-black-ataturk.png",
     colors: ["black", "white"],
     isFavorite: false,
   },
@@ -86,7 +75,7 @@ export const _products = [
     id: 10,
     name: "Kapüşonlu Uzun Kollu Baskılı Kalın Erkek Sweatshirt",
     price: 119.99,
-    img: img10,
+    img: "sweatshirt-white-ataturk.png",
     colors: ["white", "black"],
     isFavorite: false,
   },

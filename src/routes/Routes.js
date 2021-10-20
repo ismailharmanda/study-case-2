@@ -1,4 +1,4 @@
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import DefaultPage from "../views/DefaultPage";
 import Cart from "../views/Cart";
