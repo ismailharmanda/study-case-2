@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { searchActions } from "../../store";
 
 import banner from "../../assets/logo.svg";
@@ -10,6 +10,11 @@ import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   const [searchInput, setSearchInput] = useState("");
   const dispatch = useDispatch();
+
+  const cartState = useSelector((state) => state.cart);
+  const totalItemOnCart = cartState?.items
+    .map((item) => item.amount)
+    .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
 
   const onInputChange = (e) => {
     setSearchInput(e.target.value);
@@ -60,7 +65,12 @@ const Header = () => {
           <div>
             <Link to="#">
               <img src={cart} alt="Cart" />
-              <p>Sepetim</p>
+              <p>
+                Sepetim
+                {totalItemOnCart > 0 && (
+                  <span className="card-total">({totalItemOnCart})</span>
+                )}
+              </p>
             </Link>
           </div>
         </div>

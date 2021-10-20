@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { productActions } from "../../store";
+import { cartActions } from "../../store";
 
 import unFavoritedIcon from "../../assets/interactions/unfavorited.svg";
 import favoritedIcon from "../../assets/interactions/favorited.svg";
@@ -18,6 +19,9 @@ import img10 from "../../assets/products/sweatshirt-white-ataturk.png";
 const ProductCard = ({ id, img, name, price, colors, isFavorite }) => {
   const dispatch = useDispatch();
 
+  const addCartClick = () => {
+    dispatch(cartActions.add({ id, price, amount: 1 }));
+  };
   let imageUrl;
   switch (id) {
     case 1:
@@ -106,7 +110,9 @@ const ProductCard = ({ id, img, name, price, colors, isFavorite }) => {
           ))}
           <span className="product-color__total">{colors.length} renk</span>
         </div>
-        <button className="btn btn-primary col-12">Sepete Ekle</button>
+        <button onClick={addCartClick} className="btn btn-primary col-12">
+          Sepete Ekle
+        </button>
       </div>
     </div>
   );
