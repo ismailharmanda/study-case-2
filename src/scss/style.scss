@@ -41,7 +41,7 @@ $light-gray-color: #f2f2f2;
   background: $color;
   width: 32px;
   height: 32px;
-  border: 0px solid white;
+  border: 1px solid darken($color, 10%);
   border-radius: 50%;
   margin-left: -1rem;
 }

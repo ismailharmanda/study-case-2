@@ -63,7 +63,7 @@ const Header = () => {
             </Link>
           </div>
           <div>
-            <Link to="#">
+            <Link to="/cart">
               <img src={cart} alt="Cart" />
               <p>
                 Sepetim
