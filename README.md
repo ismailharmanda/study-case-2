@@ -15,6 +15,7 @@ It is the online shopping site of a brand like LCW that appeals to every budget 
 ![Redux](https://img.shields.io/badge/Redux-593D88?style=flat&logo=redux&logoColor=white)
 ![Nodejs](https://img.shields.io/badge/-Nodejs-darkblue?style=flat&logo=Node.js)
 
+- https://lcw-case.netlify.app/
 - Add some products to cart
 - Click Cart item on the top-right
 - ✨Magic ✨
