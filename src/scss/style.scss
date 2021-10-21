@@ -511,12 +511,9 @@ div,
     }
 
     h5 {
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 400;
 
-      @include sm {
-        font-size: 20px;
-      }
       @include xl {
         font-size: 24px;
       }
@@ -540,7 +537,10 @@ div,
     }
 
     &-code {
-      font-size: 16px;
+      font-size: 20px;
+      @include sm {
+        font-size: 16px;
+      }
       @include xl {
         font-size: 20px;
       }

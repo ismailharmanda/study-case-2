@@ -122,7 +122,7 @@ const CartItem = ({ id, amount, price }) => {
       <div className="col-12 col-sm-2 p-0 text-center text-sm-start">
         <img className="cart-item__image" alt="Product" src={imageUrl} />
       </div>
-      <div className="cart-item__content col-12 col-sm-8 m-0 p-0 ps-5">
+      <div className="cart-item__content col-12 col-sm-8 m-0 p-0 ps-sm-5">
         <h5>{currentProduct.name}</h5>
         <div className="cart-item__content-code">W1CE95z8 - 998</div>
         <div
