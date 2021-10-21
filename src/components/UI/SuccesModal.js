@@ -7,7 +7,7 @@ import classNames from "classnames";
 const SuccessModal = () => {
   return (
     <div className={classes["success-modal"]}>
-      Ürün başarıl bir şekilde sepete eklendi
+      Ürün başarılı bir şekilde sepete eklendi
     </div>
   );
 };
