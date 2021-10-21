@@ -99,7 +99,8 @@ const FavoriteItem = ({ id, price }) => {
       <div className="col-12 col-sm-2 p-0 text-center text-sm-start">
         <img style={{ width: "100%" }} alt="Product" src={imageUrl} />
       </div>
-      <div className="col-12 col-sm-10 m-0 p-0">
+      <div className="col-0 col-sm-1"></div>
+      <div className="col-12 col-sm-9 m-0 p-0">
         <h5>{currentProduct.name}</h5>
         <div className="cart-item__content-code">W1CE95z8 - 998</div>
         <div className="favorite-item__price">{price}</div>
