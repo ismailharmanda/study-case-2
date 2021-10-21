@@ -27,7 +27,7 @@ const Header = () => {
   const onSearchClick = (e) => {
     e.preventDefault();
 
-    if (searchInput.length < 3) {
+    if (searchInput.trim().length < 3) {
       setErrorMessage("Minimim 3 karakter");
     } else {
       dispatch(searchActions.search(searchInput));
