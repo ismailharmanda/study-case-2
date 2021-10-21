@@ -192,14 +192,10 @@ div,
 
   &__top {
     background: $light-gray-color;
-    height: 220px;
+    height: 300px;
     padding-inline: 5%;
     font-size: 18px;
     font-weight: 500;
-
-    @include sm {
-      height: 150px;
-    }
 
     @include lg {
       height: 72px;
@@ -208,24 +204,23 @@ div,
       span {
         display: block;
         text-align: center;
-        @include sm {
-          margin-right: 48px;
-          text-align: left;
-        }
         @include lg {
           display: inline;
+          margin-right: 48px;
+          text-align: left;
         }
       }
       img {
         display: block;
-        margin: 0 auto;
+        margin: 0.5rem auto;
 
-        @include sm {
-          margin: 0;
-          display: inline-block;
-        }
+        // @include sm {
+        //   margin: 0;
+        //   display: inline-block;
+        // }
         @include lg {
-          margin-right: 8px;
+          margin: 0 8px 0 0;
+          display: inline-block;
         }
       }
     }
@@ -234,24 +229,22 @@ div,
       span {
         display: block;
         text-align: center;
-        @include sm {
-          margin-right: 48px;
-          text-align: left;
-        }
+        margin-bottom: 0.5rem;
         @include lg {
           display: inline;
+          margin-right: 48px;
+          text-align: left;
         }
       }
       img {
         margin-right: 20px;
-
-        @include sm {
+        @include lg {
           margin-right: 32px;
           text-align: left;
         }
       }
 
-      @include sm {
+      @include lg {
         text-align: left;
       }
     }
